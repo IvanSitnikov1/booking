@@ -1,7 +1,7 @@
 """doc"""
-from rest_framework import serializers, validators
+from rest_framework import serializers, validators # pylint: disable=E0401
 
-from api.models import ApiUser, Hotel, Room, Booking
+from api.models import ApiUser, Hotel, Room, Booking # pylint: disable=E0401
 
 
 class UserSerializer(serializers.Serializer):
