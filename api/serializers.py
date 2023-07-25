@@ -1,9 +1,11 @@
+"""doc"""
 from rest_framework import serializers, validators
 
 from api.models import ApiUser, Hotel, Room, Booking
 
 
 class UserSerializer(serializers.Serializer):
+    """doc"""
     username = serializers.CharField(max_length=128, validators=[
         validators.UniqueValidator(ApiUser.objects.all())
     ])
@@ -34,6 +36,7 @@ class UserSerializer(serializers.Serializer):
 
 
 class HotelSerializer(serializers.ModelSerializer):
+    """doc"""
     class Meta:
         model = Hotel
         fields = '__all__'
@@ -41,6 +44,7 @@ class HotelSerializer(serializers.ModelSerializer):
 
 
 class RoomSerializer(serializers.ModelSerializer):
+    """doc"""
     class Meta:
         model = Room
         fields = '__all__'
@@ -48,6 +52,7 @@ class RoomSerializer(serializers.ModelSerializer):
 
 
 class BookingSerializer(serializers.ModelSerializer):
+    """doc"""
     class Meta:
         model = Booking
         fields = '__all__'
