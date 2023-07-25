@@ -15,6 +15,7 @@ class UserSerializer(serializers.Serializer):
     password = serializers.CharField(min_length=6, max_length=20, write_only=True)
 
     def update(self, instance, validated_data):
+        """doc"""
         if email := validated_data.get('email'):
             instance.email = email
             instance.save(update_fields=['email'])
@@ -25,6 +26,7 @@ class UserSerializer(serializers.Serializer):
         return instance
 
     def create(self, validated_data):
+        """doc"""
         user = ApiUser.objects.create(
             email=validated_data['email'],
             username=validated_data['username']
@@ -38,6 +40,7 @@ class UserSerializer(serializers.Serializer):
 class HotelSerializer(serializers.ModelSerializer):
     """doc"""
     class Meta:
+        """doc"""
         model = Hotel
         fields = '__all__'
         extra_kwargs = {'id': {'read_only': True}}
@@ -46,6 +49,7 @@ class HotelSerializer(serializers.ModelSerializer):
 class RoomSerializer(serializers.ModelSerializer):
     """doc"""
     class Meta:
+        """doc"""
         model = Room
         fields = '__all__'
         extra_kwargs = {'id': {'read_only': True}}
@@ -54,6 +58,7 @@ class RoomSerializer(serializers.ModelSerializer):
 class BookingSerializer(serializers.ModelSerializer):
     """doc"""
     class Meta:
+        """doc"""
         model = Booking
         fields = '__all__'
         extra_kwargs = {'id': {'read_only': True}}
