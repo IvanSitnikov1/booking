@@ -37,27 +37,27 @@ class UserSerializer(serializers.Serializer):
         return user
 
 
-class HotelSerializer(serializers.ModelSerializer):
+class HotelSerializer(serializers.ModelSerializer): # pylint: disable=R0903
     """doc"""
-    class Meta:
+    class Meta:# pylint: disable=R0903
         """doc"""
         model = Hotel
         fields = '__all__'
         extra_kwargs = {'id': {'read_only': True}}
 
 
-class RoomSerializer(serializers.ModelSerializer):
+class RoomSerializer(serializers.ModelSerializer):# pylint: disable=R0903
     """doc"""
-    class Meta:
+    class Meta:# pylint: disable=R0903
         """doc"""
         model = Room
         fields = '__all__'
         extra_kwargs = {'id': {'read_only': True}}
 
 
-class BookingSerializer(serializers.ModelSerializer):
+class BookingSerializer(serializers.ModelSerializer):# pylint: disable=R0903
     """doc"""
-    class Meta:
+    class Meta:# pylint: disable=R0903
         """doc"""
         model = Booking
         fields = '__all__'
