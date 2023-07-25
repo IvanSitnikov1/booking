@@ -1,10 +1,11 @@
+"""doc"""
 from django.contrib.auth.models import AbstractUser # pylint: disable=E0401
 from django.db import models # pylint: disable=E0401
 
 # Create your models here.
 class ApiUser(AbstractUser):# pylint: disable=R0903
     """abstract class"""
-    pass # pylint: disable=E0401
+    pass # pylint: disable=W0107
 
 
 class Hotel(models.Model):# pylint: disable=R0903
