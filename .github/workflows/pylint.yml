@@ -13,4 +13,4 @@ jobs:
         pip install pylint
     - name: Analysing the code with pylint
       run: |
-        pylint ./api/models.py
+        pylint ./api/models.py ./api/serializers.py
